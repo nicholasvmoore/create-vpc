@@ -1,0 +1,69 @@
+{
+  "name": "dev",
+  "region": "us-east-2",
+  "profileName": "account",
+  "accountId": "000000000000",
+  "management": {
+    "profileName": "liiaws1",
+    "accountId": "000000000000",
+    "vpcCidr": "192.168.200.0/25",
+    "vpcId": "vpc-fffffffff"
+  },
+  "vpc":{ 
+    "cidr": "192.168.200.128/25",
+    "dhcpDomain": "moorenix.com",
+    "dns1": "192.168.200.10",
+    "dns2": "192.168.200.11",
+    "availabilityZones": [ "2a", "2b" ],
+    "subnets": [
+      {
+          "name": "data_subnet-2a",
+          "cidr": "192.168.200.128/28",
+          "region": "us-east-1",
+          "vpc": "vpc",
+          "az": "2a",
+          "external": false
+      },
+      {
+        "name": "data_subnet-2b",
+        "cidr": "192.168.200.144/28",
+        "region": "us-east-1",
+        "vpc": "vpc",
+        "az": "2b",
+        "external": false
+      },
+      {
+        "name": "www_subnet-2a",
+        "cidr": "192.168.200.160/28",
+        "region": "us-east-1",
+        "vpc": "vpc",
+        "az": "2a",
+        "external": false
+      },
+      {
+        "name": "www_subnet-2b",
+        "cidr": "192.168.200.176/28",
+        "region": "us-east-1",
+        "vpc": "vpc",
+        "az": "2b",
+        "external": false
+      },
+      {
+        "name": "elb_subnet-2a",
+        "cidr": "192.168.200.192/27",
+        "region": "us-east-1",
+        "vpc": "vpc",
+        "az": "2a",
+        "external": true
+      },
+      {
+        "name": "elb_subnet-2b",
+        "cidr": "192.168.200.224/27",
+        "region": "us-east-1",
+        "vpc": "vpc",
+        "az": "2b",
+        "external": true
+      }
+    ]
+  }
+}
